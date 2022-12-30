@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript-Jquery HTML Dom İşlemleri</title>
+</head>
+<body>
+    <h1>Javascript-Jquery HTML Dom İşlemleri</h1>
+    <h2> DOM- Document Object Model</h2>
+    <p>
+        Document Object Model, "DOM", "Belge Nesnesi Modeli" anlamlarına da gelmektedir.
+        İnternet tarayıcıları girilen internet sitesini bir belge, bu belge içerisinde bulunan tüm elemanları da nesne olarak kabul eder.
+        Buna göre resim, yazı, form gibi tüm elemanlar nesnedir.
+    </p>
+    <hr />
+    <h2>HTML Ögelerini Kaldırma</h2>
+    <div id="silinecek">
+        Bu element Jquery ile silinecek.
+    </div>
+    <div id="silinecek2">
+        Bu element Js ile silinecek.
+    </div>
+    <hr />
+
+    <h2>HTML Üst Öge Seçme </h2>
+    <div id="aciklama">Jquery parent ile HTML Üst Öge Seçme </div>
+    <p id="html"></p>
+
+    <div id="aciklama2">Js parent ile HTML Üst Öge Seçme </div>
+    <p id="html2"></p>
+
+    <script src="/Scripts/jquery-3.6.1.min.js"></script>
+    <script>
+        //HTML Ögelerini Kaldırma
+        //Jquery ile kaldırma
+        $(document).ready(function () {
+            $("#silinecek").remove();
+        });
+        //Js ile kaldırma
+        document.getElementById("silinecek2").remove();
+
+        //HTML Üst Öge Seçme
+        //Jquery ile Seçme
+        $("#html").text($("#aciklama").parent().prop("nodeName"));
+        //Js ile Seçme
+        document.getElementById("html2").innerText = document.getElementById("aciklama2").parentNode.nodeName;
+    </script>
+</body>
+</html>

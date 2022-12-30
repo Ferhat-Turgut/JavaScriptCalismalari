@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js-While Döngüsü</title>
+    <script>
+        //WHİLE Döngüsü
+        var sayi, toplam, sayac;
+        sayi = window.prompt("Bir sayi giriniz.Negatif değer girişi işlemi sonlandırır", "0");
+        sayi = parseFloat(sayi);
+        sayac = 0;
+        toplam = 0;
+
+        while (sayi > 0)
+        {
+            sayac++;
+            toplam += sayi;
+            sayi = window.prompt("Bir sayi giriniz.Negatif değer girişi işlemi sonlandırır", "0");
+            sayi = parseFloat(sayi);
+        }
+        document.write("<h2>Girilen sayı adedi: " + sayac + "</h2>");
+        document.write("<h2>Girilen sayı toplamı: " + toplam + "</h2>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

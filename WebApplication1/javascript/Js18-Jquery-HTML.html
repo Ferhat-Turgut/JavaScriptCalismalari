@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>HTML Metin İçerik İşlemleri</title>
+</head>
+<body>
+    <h1>HTML Metin İçerik İşlemleri</h1>
+
+    <h2>Metin İçerik Ayarlama</h2>
+    <p id="p1">Hello!</p>
+    <p id="p2">World!</p>
+    <hr />
+
+    <h2>Metin İçeriği Alma</h2>
+    <p id="p3">Jquery ile alma!</p>
+    <p id="p4">Js ile alma!</p>
+    <p id="p5">!</p>
+    <p id="p6"></p>
+    <hr />
+
+    <h2>HTML İçeriği Ayarlama</h2>
+    <div id="htmlicerik"></div>
+    <hr />
+
+    <h2>HTML İçeriği Alma</h2>
+    <div id="htmlicerikAl"></div>
+
+    <script src="../Scripts/jquery-3.6.1.min.js"></script>
+    <script>
+
+        //Metin İçerik Ayarlama
+        //Jquery ile değiştir
+        $(document).ready(function () {
+            var JqileDegistir = $("#p1");
+            JqileDegistir.text("Jquery ile değiştirildi.");
+        });
+
+        //Js ile değiştir
+        const JsileDegistir = document.getElementById("p2");
+        JsileDegistir.textContent = "Js ile değiştirildi.";
+
+        //Metin İçeriği Alma
+        //Jquery ile alma
+        $(document).ready(function () {
+            var JqileAlma = $("#p3").text();
+            $("#p5").text(JqileAlma + "(alındı..)");
+        });
+
+        //Js ile alma
+        const JsileAlma = document.getElementById("p4").textContent;
+        document.getElementById("p6").textContent = JsileAlma + "(alındı...)";
+
+        //HTML İçeriği Ayarlama
+        //Jq ile
+        $("#htmlicerik").html("<h2>Jq ile İçeriği Ayarlama</h2>");
+
+        //Js ile
+        document.getElementById("htmlicerik").innerHTML += "<h3>Js ile İçeriği Ayarlama</h3>";
+
+        //HTML İçeriği Alma
+        //Jq ile
+        var icerik = $("#htmlicerik").html();
+        $("#htmlicerikAl").html(icerik + " with Jq");
+
+        //Js ile
+        var content1 = document.getElementById("htmlicerik").innerHTML;
+        document.getElementById("htmlicerikAl").innerHTML += content1 + " with Js";
+    </script>
+</body>
+</html>

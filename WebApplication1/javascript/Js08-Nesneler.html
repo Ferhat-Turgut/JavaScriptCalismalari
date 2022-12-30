@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Nesneler(Object) & Özellikler(Properties)</title>
+    <script>
+        function Pers(ad, saatucret)
+        {
+            console.log('buraya girdi');
+            this.ad = ad;
+            this.saatucret = saatucret;
+            this.ucretOde = ucretOde;
+
+        }
+        function ucretOde(saat) {
+
+            console.log('ucret hesaplanıyor');
+            return this.saatucret * saat;
+        }
+
+        s1 = parseInt(window.prompt(" 1. çalışanın çalışma süresi(saat)=", "0"));        
+        s2 = parseInt(window.prompt("2. adlı çalışanın çalışma süresi(saat)=", "0"));
+        
+        pers1 = new Pers("Mehmet", 80);
+        pers2 = new Pers("Ayşe", 70);
+        
+        document.writeln("<h1>Çalışma Tutarı Hesaplama</h1>");
+        document.writeln("<h2 style='color: red'>" + pers1.ad + " adlı çalışanın,çalışma süresi= " + s1 + ", saatlik ücreti= " + pers1.saatucret + ", ödenecek toplam tutar=" + pers1.ucretOde(s1) + "</h2>");
+        document.writeln("<h2 style='color: blue'>" + pers2.ad + " adlı çalışanın,çalışma süresi= " + s2 + ", saatlik ücreti= " + pers2.saatucret + ", ödenecek toplam tutar=" + pers2.ucretOde(s2) + "</h2>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

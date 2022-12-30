@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js-DOM Selectors(Seçiciler)</title>
+    <!--DOM, Document Object Model-->
+</head>
+<body>
+    <h1>Js-DOM Selectors(Seçiciler)</h1>
+    <hr />
+    <h2>HTML Ögelerini ID  ile Bulma</h2>
+    <p id="p1">1. Paragraf İçeriği</p>
+    <p id="p2"></p>
+    <script>
+        const secici1 = document.getElementById("p1"); //const Değer olarak sabit olarak tanımlanan ve kod blog boyunca değişmeyen ve değiştirilemeyen değişkenler.
+        document.getElementById("p2").innerHTML = "getElementById ile 1. paragraftaki html ögesi çekildi = " + secici1.innerHTML + "";
+    </script>
+    <hr />
+
+    <h2>HTML Ögelerini etiket (tag) adı ile Bulma</h2>
+    <div>1. div içeriği</div>
+    <div id="div1"></div>
+    <script>
+        const secici2 = document.getElementsByTagName("div");
+        document.getElementById("div1").innerHTML = "getElementsByTagName ile [0] indexteki div in html içeriği çekildi = " + secici2[0].innerHTML + "";
+    </script>
+    <hr />
+
+    <h2 class="seciciclass">HTML Ögelerini sınıf (class) adı  ile Bulma</h2>
+    <p id="p3"></p>
+    <script>
+        const secici3 = document.getElementsByClassName("seciciclass");
+        document.getElementById("p3").innerHTML = "getElementsByClassName ile [0] indexteki class ın html içeriği çekildi = " + secici3[0].innerHTML + ""
+    </script>
+    <hr />
+
+    <h2 class="sorgusecici">Sorgu Seçiciye göre HTML Ögelerini Bulma</h2>
+    <p id="p4"></p>
+    <script>
+        const secici4 = document.querySelectorAll("h2.sorgusecici");
+        document.getElementById("p4").innerHTML = "querySelectorAll ile [0] indexteki sorgunun html içeriği çekildi = " + secici4[0].innerHTML + ""
+    </script>
+</body>
+</html>

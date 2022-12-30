@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js-Olaylar (events)</title>
+    <script>
+        /*
+         onblur
+         onclick
+         onfocus
+         onload
+         onmousemove
+         onmouseover
+         onselect
+         onsubmit
+         onunload vb..
+         */
+    </script>
+</head>
+<body>
+    <h1>Js-Olaylar (events)-Onclick</h1>
+    <a href="" onclick="alert('Onclick olayı gerçekleşti'); return false">Tıklayınız</a>
+    <hr />
+    <h1>Js-Olaylar (events)-Onclick2</h1>
+    <form name="frmcinsiyet">
+        <input id="Radio1" type="radio" name="cins" value="ERKEK" />ERKEK
+        <input id="Radio2" type="radio" name="cins" value="KADIN" />KADIN
+        <input id="Button1" type="button" value="Seç" onclick="goster()" />
+    </form>
+    <script>
+        function goster() {
+            var c = "";
+            if (document.frmcinsiyet.cins[0].checked) {
+                c = "ERKEK";
+                alert("Seçilen cinsiyet=" + c)
+            }
+            else if (document.frmcinsiyet.cins[1].checked) {
+                c = "KADIN";
+                alert("Seçilen cinsiyet=" + c)
+            }
+            else {
+                alert("Cinsiyet Seçiniz");
+            }
+
+        }
+
+        function kontrol() {
+            str = "Google'a git";
+            if (confirm(str)) //confirm, onay kutusu denilebilir.
+            {
+                location.href = "https://www.google.com.tr/";
+            }
+        }
+    </script>
+    <hr />
+
+    <h1>Js-Olaylar (events)-Confirm</h1>
+    <input id="Button1" type="button" value="Google" onclick="kontrol()" />
+    <hr />
+
+    <h1>Js-Olaylar (events)-onMouseOver</h1>
+    <a href="" onmouseover="alert('Mouse a tagının üstüne geldi.'); return false">onMouseOver</a>
+    <hr />
+
+    <h1>Js-Olaylar (events)-Focus&Onblur</h1>
+    <input id="Text1" type="text" value="Focus-Onblur" onfocus="this.value = 'Focus olayı gerçekleşti.'" onblur="this.value='Onblur olayı gerçekleşti.'"/>
+    <hr />
+
+    <h1>Js-Olaylar (events)-onChange</h1>
+    <form>
+        <select name="list" size="1" onchange="location = sec(this)">
+            <option>Seçiniz</option>
+            <option value="https://www.google.com.tr/">Google</option>
+            <option value="https://www.Yahoo.com.tr/">Yahoo</option>
+            <option value="https://www.Yandex.com.tr/">Yandex</option>
+        </select>
+    </form>
+    <script>
+        function sec(s)
+        {
+            return s.options[s.selectedIndex].value
+        }
+    </script>
+    <hr />
+    <form name="frmsubmit" onsubmit="return verikontrol()">
+        <b>5 Adet Karakter Giriniz.</b>
+        <input id="txtsubmit" type="text" name="karakter" size="5" />
+        <input id="Submit1" type="submit" value="Karakterler Girildi." />
+    </form>
+    <script>
+        function verikontrol()
+        {
+            
+            if (document.frmsubmit.karakter.value.length == 5)
+            {
+                return true;
+            }
+            else
+            {
+                alert("Lütfen 5 Karakter Giriniz");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

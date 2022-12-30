@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js-Do_While Döngüsü</title>
+    <script>
+        var sayi, ort, toplam, sinirDeğer;
+        sinirDeğer = window.prompt("Kaça kadar toplansın?", "0");
+        sinirDeğer = parseInt(sinirDeğer);
+        toplam = 0; ort = 0; sayi = 0;
+        do {
+            toplam = toplam + sayi;
+            sayi++;
+        } while (sayi <= sinirDeğer);
+        ort = toplam / sinirDeğer;
+        document.write("<h2>Girilen üst değer:" + sinirDeğer + "</h2>");
+        document.write("<h2>Sayıların Toplamı:" + toplam + "</h2>");
+        document.write("<h2>Sayıların Ortalaması:" + ort + "</h2>");
+    </script>
+</head>
+<body>
+    <h2></h2>
+</body>
+</html>

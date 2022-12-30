@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        
+        
+
+        function sahis(ad,soyad,cinsiyet)
+        {
+            this.ad = ad;
+            this.soyad = soyad;
+            this.cinsiyet = cinsiyet;
+        }
+
+        kadir = new sahis("Kadir", "ALTIN", "Erkek");
+        buse = new sahis("Buse", "Aytun", "Kadın");
+        fatma = new sahis("Fatma", "Şaşmaz", "Kadın");
+
+        function oto(marka, model, yil, renk, sahip) {
+            this.marka = marka;
+            this.model = model;
+            this.yil = yil;
+            this.renk = renk;
+            this.sahis = sahip;
+        }
+
+        oto1 = new oto("Fiat", "Egea", 2018, "Kırmızı", kadir);
+        oto2 = new oto("Ford", "Fiesta", 2015, "Mavi", buse);
+        oto3 = new oto("Renault", "Clio", 2020, "Beyaz", fatma);
+
+        document.writeln("<h1>Kullanıcı Bilgileri</h1>");
+        document.writeln("Adı-Soyadı: " + oto1.sahis.ad + "-" + oto1.sahis.soyad + " Cinsiyet:" + oto1.sahis.cinsiyet + "");     
+        document.write("<br>");
+        document.writeln("Araç Bilgileri");
+        document.writeln("Marka:" + oto1.marka + " Model ve Yılı:" + oto1.model + " " + oto1.yil + " Renk:" + oto1.renk + "");
+
+        document.writeln("<h1>Kullanıcı Bilgileri</h1>");
+        document.writeln("Adı-Soyadı: " + oto2.sahis.ad + "-" + oto2.sahis.soyad + " Cinsiyet:" + oto2.sahis.cinsiyet + "");
+        document.write("<br>");
+        document.writeln("Araç Bilgileri");
+        document.writeln("Marka:" + oto2.marka + " Model ve Yılı:" + oto2.model + " " + oto2.yil + " Renk:" + oto2.renk + "");
+
+        document.writeln("<h1>Kullanıcı Bilgileri</h1>");
+        document.writeln("Adı-Soyadı: " + oto3.sahis.ad + "-" + oto3.sahis.soyad + " Cinsiyet:" + oto3.sahis.cinsiyet + "");
+        document.write("<br>");
+        document.writeln("Araç Bilgileri");
+        document.writeln("Marka:" + oto3.marka + " Model ve Yılı:" + oto3.model + " " + oto3.yil + " Renk:" + oto3.renk + "");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

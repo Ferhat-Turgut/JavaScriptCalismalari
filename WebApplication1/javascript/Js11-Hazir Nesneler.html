@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js-Hazir Nesneler</title>
+    <script>
+        document.write(innerWidth + "<br>"); //pencere genişliği (piksel)
+        document.write(innerHeight + "<br>");//pencere yüksekliği (piksel)
+        document.bgColor = "red";
+        document.fgColor = "yellow";
+    </script>
+</head>
+<body>
+    <h2>Büyük-Küçük Harf Uygulaması</h2>
+
+    <form name="form1">
+        <b>Adınız:</b>
+        <input id="Text1" type="text" name="ad"/>
+        <hr />
+        <b>Soyadınız:</b>
+        <input id="Text2" type="text" name="soyad" />
+        <hr />
+        <input id="Button1" type="button" value="BÜYÜK" name="buyukharf" onclick="degis('buyuk')" />
+        <input id="Button2" type="button" value="küçük" name="kucukharf" onclick="degis('kucuk')"/>
+    </form>
+
+    <script>
+        function degis(d)
+        {
+            if (d == "buyuk")
+            {
+                document.form1.ad.value = document.form1.ad.value.toUpperCase()
+                document.form1.soyad.value = document.form1.soyad.value.toUpperCase()
+            }
+            else
+            {
+                document.form1.ad.value = document.form1.ad.value.toLowerCase()
+                document.form1.soyad.value = document.form1.soyad.value.toLowerCase()
+            }
+        }
+    </script>
+
+    <a href="/javascript/Js12-History Nesnesine ait Methotlar.html">Js-History Nesnesine ait Methotlar</a>
+</body>
+</html>

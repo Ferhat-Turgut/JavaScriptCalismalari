@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Js-Fonksiyonlar</title>
+    <script>
+        function yazi(paramtre)
+        {
+            document.writeln("<h1>" + paramtre + "</h1>");
+        }
+        function renkDegistir(renk)
+        {
+            document.bgColor = renk;
+        }
+
+        function yaziRenkDegistir(yaziRenk)
+        {
+            document.fgColor = yaziRenk;
+        }
+        yazi("BackGround Color");
+    </script>
+</head>
+<body>
+    <form>
+        
+        <p>To add background color in HTML, use the CSS background-color property. Set it to the color name or code you want and place it inside a style attribute.</p>
+        <input style="background-color:red;color:black" id="Button1" type="button" value="red" onclick="renkDegistir('red')" />
+        <input style="background-color:green;color:black" id="Button2" type="button" value="green" onclick="renkDegistir('green')" />
+        <input style="background-color:blue;color:black" id="Button3" type="button" value="blue" onclick="renkDegistir('blue')" />
+    </form>
+    <hr />
+    <h1>Font Color</h1>
+    <form>
+        <input style="background-color:white;color:red" id="Button4" type="button" value="red" onclick="yaziRenkDegistir('red')" />
+        <input style="background-color:white;color:green" id="Button5" type="button" value="green" onclick="yaziRenkDegistir('green')" />
+        <input style="background-color:white;color:blue" id="Button6" type="button" value="blue" onclick="yaziRenkDegistir('blue')" />
+
+    </form>
+</body>
+</html>
